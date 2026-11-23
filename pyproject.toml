@@ -1,0 +1,36 @@
+[project]
+name = "mockcard"
+version = "2.0.0"
+description = "MockCard SDK for Python: chaos runs in CI, payment webhook checks and the production probe guard."
+authors = [{ name = "Arixeva Labs", email = "hello@arixevalabs.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["mockcard", "payments", "webhooks", "stripe", "razorpay", "chaos testing", "idempotency", "webhook testing", "pytest", "3ds"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Framework :: Pytest",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Office/Business :: Financial",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.entry-points.pytest11]
+mockcard = "mockcard.pytest_plugin"
+
+[project.urls]
+Homepage = "https://www.mockcard.io"
+Documentation = "https://www.mockcard.io/docs"
+Source = "https://github.com/arixevalabs/mockcard-python"
+Issues = "https://github.com/arixevalabs/mockcard-python/issues"
+
+[build-system]
+# 77+ understands the SPDX `license = "MIT"` string above.
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
